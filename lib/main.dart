@@ -40,10 +40,12 @@ class _HomeState extends State<Home> {
                 Padding(
                   padding: EdgeInsets.all(10),
                   child: FlatButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        _trocarPessoas(1);
+                      },
                       child: Text(
-                        "-1",
-                        style: TextStyle(color: Colors.white),
+                        "+1",
+                        style: TextStyle(color: Colors.black, fontSize: 30),
                       )),
                 ),
                 Padding(
@@ -51,16 +53,18 @@ class _HomeState extends State<Home> {
                   child: FlatButton(
 
                       child: Text(
-                        "+1",
-                        style: TextStyle(color: Colors.white, fontSize: 20),
+                        "-1",
+                        style: TextStyle(color: Colors.black, fontSize: 30),
                       ),
-                      onPressed: () {}),
+                      onPressed: () {
+                        _trocarPessoas(-1);
+                      }),
                 )
               ],
             ),
             Text(
-              "Total",
-              style: TextStyle(color: Colors.black, fontSize: 20),
+              "$_pessoa",
+              style: TextStyle(color: Colors.black, fontSize: 50, fontWeight: FontWeight.bold),
             ),
           ],
         )
